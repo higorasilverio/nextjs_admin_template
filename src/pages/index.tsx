@@ -1,7 +1,9 @@
+import { Layout } from "components/templates";
+
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <Layout title="Initial page" subtitle="We are build its content yet">
+      <h3>Content</h3>
+    </Layout>
   );
 }
