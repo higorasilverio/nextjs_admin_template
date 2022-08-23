@@ -1,7 +1,9 @@
+import useAppData from "data/hooks/useAppData";
 import { ReactNode } from "react";
 import Content from "./Content";
 import Header from "./Header";
 import SideMenu from "./SideMenu";
+import ThemeButton from "./ThemeButton";
 
 type LayoutProps = {
   title: string;
@@ -10,8 +12,10 @@ type LayoutProps = {
 };
 
 const Layout = ({ title, subtitle, children }: LayoutProps) => {
+  const { theme } = useAppData();
+
   return (
-    <div className="dark flex h-screen w-screen ">
+    <div className={`${theme} flex h-screen w-screen`}>
       <SideMenu />
       <div
         className="flex flex-col w-full 
