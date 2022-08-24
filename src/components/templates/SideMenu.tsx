@@ -1,6 +1,5 @@
 import useAuth from "data/hooks/useAuth";
 import { HomeIcon } from "../icons/HomeIcon";
-import { LogoutIcon } from "../icons/LogoutIcon";
 import { MenuIcon } from "../icons/MenuIcon";
 import { NotificationsIcon } from "../icons/NotificationsIcon";
 import { SettingsIcon } from "../icons/SettingsIcon";
@@ -35,7 +34,7 @@ const SideMenu = () => {
             dark:text-red-600 dark:hover:bg-red-600 dark:hover:text-white hidden group-hover:flex"
           onClick={logout}
           text="Logout"
-          icon={<LogoutIcon />}
+          icon={null}
         />
       </ul>
     </aside>
