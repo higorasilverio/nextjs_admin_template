@@ -2,10 +2,13 @@
 import AuthInput from "@/components/auth/AuthInput";
 import { GoogleIcon } from "@/components/icons/GoogleIcon";
 import WarningIcon from "@/components/icons/WarningIcon";
+import useAuth from "data/hooks/useAuth";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 const Authentication = () => {
+  const { login, register, googleLogin } = useAuth();
+
   const [mode, setMode] = useState<"login" | "register">("login");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -19,13 +22,22 @@ const Authentication = () => {
     getImageSrc().then((data) => setSrc(data.url));
   }, []);
 
-  const submit = useCallback(() => {
-    setError(() => (mode === "login" ? "Login error!" : "Register error"));
+  const showError = useCallback((message: string) => {
+    setError(message);
     setTimeout(() => {
       setError("");
     }, 5000);
-    console.log(`submite ${mode}`);
-  }, [mode]);
+  }, []);
+
+  const submit = useCallback(async () => {
+    try {
+      mode === "login"
+        ? await login(email, password)
+        : await register(email, password);
+    } catch (error) {
+      showError(error?.message ?? "Unexpected error");
+    }
+  }, [email, login, mode, password, register, showError]);
 
   const toggleMode = useCallback(() => {
     setMode((currentMode) => (currentMode === "login" ? "register" : "login"));
@@ -91,7 +103,7 @@ const Authentication = () => {
         </button>
         <hr className="my-6 border-gray-300 w-full" />
         <button
-          onClick={submit}
+          onClick={googleLogin}
           className={`
         w-full bg-red-500 hover:bg-red-400
         text-white rounded-lg px-4 py-3 

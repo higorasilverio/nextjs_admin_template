@@ -1,7 +1,7 @@
 // source: https://heroicons.com/
 
 export { HomeIcon } from "./HomeIcon";
-export { LogOutIcon } from "./LogOutIcon";
+export { LogoutIcon } from "./LogoutIcon";
 export { MenuIcon } from "./MenuIcon";
 export { MoonIcon } from "./MoonIcon";
 export { NotificationsIcon } from "./NotificationsIcon";

@@ -1,6 +1,7 @@
+import useAuth from "data/hooks/useAuth";
 import {
   HomeIcon,
-  LogOutIcon,
+  LogoutIcon,
   MenuIcon,
   NotificationsIcon,
   SettingsIcon,
@@ -9,9 +10,7 @@ import Logo from "./Logo";
 import MenuItem from "./MenuItem";
 
 const SideMenu = () => {
-  const sendMessage = () => {
-    console.log("logout");
-  };
+  const { logout } = useAuth();
 
   return (
     <aside className="flex flex-col dark:bg-zinc-800 h-full w-20 group hover:transition-all">
@@ -36,9 +35,9 @@ const SideMenu = () => {
         <MenuItem
           className="text-red-600 hover:bg-red-600 hover:text-white
             dark:text-red-600 dark:hover:bg-red-600 dark:hover:text-white hidden group-hover:flex"
-          onClick={sendMessage}
-          text="Log out"
-          icon={LogOutIcon}
+          onClick={logout}
+          text="Logout"
+          icon={LogoutIcon}
         />
       </ul>
     </aside>
