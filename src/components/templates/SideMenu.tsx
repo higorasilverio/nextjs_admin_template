@@ -20,13 +20,13 @@ const SideMenu = () => {
         <Logo />
       </div>
       <ul className="flex-grow w-20 group-hover:hidden">
-        <MenuItem text="Menu" icon={MenuIcon} className="h-20" />
+        <MenuItem text="Menu" icon={<MenuIcon />} className="h-20" />
       </ul>
       <div className="flex-grow hidden group-hover:block">
         <ul>
-          <MenuItem url="/" text="Home" icon={HomeIcon} />
-          <MenuItem url="/settings" text="Settings" icon={SettingsIcon} />
-          <MenuItem url="/news" text="News" icon={NotificationsIcon} />
+          <MenuItem url="/" text="Home" icon={<HomeIcon />} />
+          <MenuItem url="/settings" text="Settings" icon={<SettingsIcon />} />
+          <MenuItem url="/news" text="News" icon={<NotificationsIcon />} />
         </ul>
       </div>
       <ul>
@@ -35,7 +35,7 @@ const SideMenu = () => {
             dark:text-red-600 dark:hover:bg-red-600 dark:hover:text-white hidden group-hover:flex"
           onClick={logout}
           text="Logout"
-          icon={LogoutIcon}
+          icon={<LogoutIcon />}
         />
       </ul>
     </aside>
