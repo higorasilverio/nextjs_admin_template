@@ -1,4 +1,4 @@
-import { Layout } from "components/templates";
+import Layout from "@/components/templates/Layout";
 
 const NewsPage = () => {
   return (

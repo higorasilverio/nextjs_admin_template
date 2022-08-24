@@ -1,11 +1,9 @@
 import useAuth from "data/hooks/useAuth";
-import {
-  HomeIcon,
-  LogoutIcon,
-  MenuIcon,
-  NotificationsIcon,
-  SettingsIcon,
-} from "../icons";
+import { HomeIcon } from "../icons/HomeIcon";
+import { LogoutIcon } from "../icons/LogoutIcon";
+import { MenuIcon } from "../icons/MenuIcon";
+import { NotificationsIcon } from "../icons/NotificationsIcon";
+import { SettingsIcon } from "../icons/SettingsIcon";
 import Logo from "./Logo";
 import MenuItem from "./MenuItem";
 

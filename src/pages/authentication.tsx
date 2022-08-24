@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import AuthInput from "@/components/auth/AuthInput";
 import { GoogleIcon } from "@/components/icons/GoogleIcon";
-import WarningIcon from "@/components/icons/WarningIcon";
+import { WarningIcon } from "@/components/icons/WarningIcon";
 import useAuth from "data/hooks/useAuth";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";

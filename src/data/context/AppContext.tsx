@@ -6,8 +6,6 @@ import {
   useState,
 } from "react";
 
-// type Theme = "dark" | "";
-
 type AppContextType = {
   theme?: string;
   toggleTheme?: () => void;

@@ -1,4 +1,4 @@
-const WarningIcon = () => {
+export const WarningIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,5 +16,3 @@ const WarningIcon = () => {
     </svg>
   );
 };
-
-export default WarningIcon;

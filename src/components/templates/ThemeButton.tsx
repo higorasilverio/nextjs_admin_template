@@ -1,4 +1,5 @@
-import { MoonIcon, SunIcon } from "../icons";
+import { MoonIcon } from "../icons/MoonIcon";
+import { SunIcon } from "../icons/SunIcon";
 
 type ThemeButtonProps = {
   theme: string;
